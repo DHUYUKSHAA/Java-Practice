@@ -54,7 +54,7 @@ public class spiralMatrix {
         int top = 0;
         int bottom = matrix.length - 1; // row
         int left = 0;
-        int right = matrix.length - 1; // column
+        int right = matrix[0].length - 1; // column
 
         while (top <= bottom && left <= right) {
 
