@@ -28,7 +28,7 @@
  * Space Complexity: O(n^2)
  */
 
-public class SpiralMatrixII {
+public class spiralMatrixII {
 
     public static void main(String[] args) {
         int n = 3; // You can change this value
