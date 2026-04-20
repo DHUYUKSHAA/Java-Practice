@@ -1,11 +1,11 @@
 /**
  * Problem: Spiral Matrix II
  * Platform: LeetCode 59
- *
+
  * Description:
  * Given an integer n, generate an n x n matrix filled with elements
  * from 1 to n^2 in spiral order.
- *
+
  * Example:
  * Input: n = 3
  * Output:
@@ -14,7 +14,7 @@
  *  [8, 9, 4],
  *  [7, 6, 5]
  * ]
- *
+
  * Approach:
  * - Use 4 boundaries: top, bottom, left, right
  * - Fill the matrix in spiral order:
@@ -23,7 +23,7 @@
  *   3. Right → Left
  *   4. Bottom → Top
  * - After each step, shrink the boundaries
- *
+ 
  * Time Complexity: O(n^2)
  * Space Complexity: O(n^2)
  */
@@ -85,7 +85,7 @@ public class spiralMatrixII {
             }
 
             // 4. Fill left column (bottom → top)
-            if (left <= right) {   // ✅ Correct condition
+            if (left <= right) {   
                 for (int i = bottom; i >= top; i--) {
                     matrix[i][left] = num++;
                 }
