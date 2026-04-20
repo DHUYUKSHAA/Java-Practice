@@ -1,14 +1,22 @@
-// Problem: Spiral Matrix
+// Problem: Spiral Matrix II
 // Platform: LeetCode
-// Link: https://leetcode.com/problems/spiral-matrix/
+// Link: https://leetcode.com/problems/spiral-matrix-ii/
+
+// Description:
+// Given an integer n, generate an n x n matrix filled with elements
+// from 1 to n^2 in spiral order.
 
 // Approach:
-// Traverse the matrix layer by layer using four boundaries:
-// top, bottom, left, right.
-// Move in 4 directions: left→right, top→bottom, right→left, bottom→top.
+// Use four boundaries: top, bottom, left, right.
+// Fill the matrix in spiral order in 4 directions:
+// 1. Left → Right
+// 2. Top → Bottom
+// 3. Right → Left
+// 4. Bottom → Top
+// After each direction, shrink the boundaries.
 
-// Time Complexity: O(m * n)
-// Space Complexity: O(1) (excluding output list)
+// Time Complexity: O(n^2)
+// Space Complexity: O(n^2)
 
 import java.util.*;
 
@@ -26,7 +34,6 @@ public class spiralMatrix {
         int[][] matrix = new int[m][n];
 
         // Input for matrix 
-        System.out.println("Enter matrix elements:");
         for (int i = 0; i < m; i++) {
             for (int j = 0; j < n; j++) {
                 matrix[i][j] = sc.nextInt();
@@ -37,7 +44,6 @@ public class spiralMatrix {
         List<Integer> result = spiralOrder(matrix);
 
         // Output
-        System.out.println("Spiral Order:");
         System.out.println(result);
     }
 
@@ -48,7 +54,7 @@ public class spiralMatrix {
         int top = 0;
         int bottom = matrix.length - 1; // row
         int left = 0;
-        int right = matrix[0].length - 1; // column
+        int right = matrix.length - 1; // column
 
         while (top <= bottom && left <= right) {
 
