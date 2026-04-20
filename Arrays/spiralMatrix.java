@@ -1,10 +1,10 @@
-// Problem: Spiral Matrix II
+// Problem: Spiral Matrix
 // Platform: LeetCode
-// Link: https://leetcode.com/problems/spiral-matrix-ii/
+// Link: https://leetcode.com/problems/spiral-matrix/
 
 // Description:
-// Given an integer n, generate an n x n matrix filled with elements
-// from 1 to n^2 in spiral order.
+// Given an m x n matrix, return all elements of the matrix
+// in spiral order.
 
 // Approach:
 // Use four boundaries: top, bottom, left, right.
