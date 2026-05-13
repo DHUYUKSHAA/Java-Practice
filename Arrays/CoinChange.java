@@ -18,9 +18,9 @@
  * Approach (Dynamic Programming - Bottom Up):
  * - Create dp array of size amount + 1
  * - dp[i] = minimum coins needed to make amount i
+
  * - Initialize dp with a large value (amount + 1)
  * - dp[0] = 0 (0 coins needed to make amount 0)
- *
  * - For each amount i:
  *     Try every coin:
  *         if coin <= i:
